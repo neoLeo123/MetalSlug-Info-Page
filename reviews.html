@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="firsttitle">METAL SLUG</h1>
+
+      <nav>
+        <a href="./about.html">About</a>
+        <a href="./index.html">Index</a>
+        <a href="./info.html">Info</a>
+        <a href="./reviews.html">Reviews</a>
+      </nav>
+    </header>
+    <h1>Reviews</h1>
+    <div id="reviewbox"></div>
+
+    <form id="reviewform" onsubmit="addReview(event)">
+      <fieldset>
+        <legend><span class="review">Post Your Review Here!!</span></legend>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="date">Date: </label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="rating">Rating: </label>
+        <input
+          type="range"
+          id="rating"
+          name="rating"
+          min="1"
+          max="5"
+          required
+          list="markers"
+        />
+        <datalist id="markers">
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+        </datalist>
+
+        <input
+          type="text"
+          id="comment"
+          name="comment"
+          required
+          placeholder="Type review here"
+        />
+        <input type="submit" value="Post" />
+      </fieldset>
+    </form>
+
+    <script src="./data.js"></script>
+  </body>
+</html>
